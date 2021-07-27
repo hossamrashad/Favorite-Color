@@ -1,0 +1,45 @@
+@import "./helpers/mixin";
+// Start Page Color 
+.parentControls {
+    margin-bottom: 60px;
+    .controls {
+        text-align: center;
+        @include reset-list;
+        @include horizontal-list;
+        .btnColor {
+            width: fit-content;
+            height: 30px;
+            line-height: 30px;
+            font-weight: 900;
+            font-size: 15px;
+            padding: 10px;
+            border: 2px solid #333;
+            margin-right: 0;
+            cursor: pointer;
+            @include borderRadius(25%);
+        }
+    }
+}
+
+.portfolio-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0px 10px;
+    .single-item {
+        margin-bottom: 30px;
+        vertical-align: middle;
+        position: relative;
+        height: 100px;
+        cursor: pointer;
+        .copyColor {
+            width: 100%;
+            height: 100%;
+            line-height: 100px;
+            text-align: center;
+            display: block;
+            font-weight: 900;
+            font-size: 130%;
+            // opacity: 0;
+        }
+    }
+}

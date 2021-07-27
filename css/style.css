@@ -1,0 +1,300 @@
+/*
+* ********** Border Radius ***********
+
+* @include borderRadius(5px);
+* 
+* @include borderRadiusposition(5px, 5px, 5px, 5px);
+* 
+* @include bordercolor(#e8ae1a, #76cd9c, #a60b55, #333);
+* 
+* @include borderStyle(solid, dashed, double, none);
+* 
+* ************ transition ****************
+* 
+* @include transitionAll(all, 0.5s, linear);
+* 
+* @include transitions();
+* 
+* @include transitionTime(0.5s);
+* 
+* @include transition(0.5s);
+* 
+* @include transitionProperty(all);
+* 
+* ************ scale *************
+* 
+* @include scale(1.5, 1.5);
+* 
+* @include scaleX(1.5);
+* 
+* @include scaleY(1.5);
+* 
+* ************ rotate ***************
+* 
+* @include rotate(10deg);
+*
+* @include rotateY(10deg);
+*
+* @include rotateX(10deg);
+*
+* @include rotateZ(10deg);
+* 
+* *************** translate **************
+*
+* @include translate(10px, 10px);
+*
+* @include translateX(10px);
+*
+* @include translateY(10px);
+*
+* @include translateZ(10px);
+* 
+* *********** skew *********
+*
+* @include skew(0deg, 0deg);
+*
+* @include skewX(0deg, 0deg);
+*
+* @include skewY(0deg, 0deg);
+* 
+* *************** matrix ***********
+*
+* @include matrix( 1, 0, 0, 1, 0, 0 );
+* 
+* * $translateX, $translateY, $scaleX, $skewY, $skewX ,$scaleY
+* 
+* ******** Box shadow **************
+*
+* @include boxShadow(-1px, 0px, 10px, #000);
+* 
+* ************ hover ************
+* 
+* @include hover {};
+* 
+*  ************** ul *****************
+* 
+* @include reset-list;
+* 
+*  *** li ***
+* 
+* @include horizontal-list;
+* 
+* ************ media ************
+* 
+* @include xs-media{}
+* 
+* @include sm-media{}
+* 
+* @include sm-md-media{}
+* 
+* @include md-media{}
+* 
+* @include md-lg-media{}
+*
+* @include lg-media{}
+* 
+* 
+* ************* overlay ************
+* 
+* @include overlay;
+* 
+* 
+* ********** prefix ******************
+* 
+* @include prefix(box-shadow, 10px 10px 10px #ccc, webkit moz o ms);
+* 
+* ************ opacity ****************
+* 
+* @include opacity(0.5);
+* 
+* 
+* ************ flex center *********
+* 
+* @include flexCenter;
+*  
+*  ************ position Center ******************
+*  
+*  @include positionCenter;
+*  
+*  
+* *********** clear fix  for float ************* 
+*  
+*  @include clearfix;
+*  
+*  
+*  
+*/
+.col-my-left-12, .col-my-left-11, .col-my-left-10, .col-my-left-9, .col-my-left-8, .col-my-left-7, .col-my-left-6, .col-my-left-5, .col-my-left-4, .col-my-left-3, .col-my-left-2, .col-my-left-1 {
+  float: left;
+  padding: 10px;
+}
+.col-my-left-12::after, .col-my-left-11::after, .col-my-left-10::after, .col-my-left-9::after, .col-my-left-8::after, .col-my-left-7::after, .col-my-left-6::after, .col-my-left-5::after, .col-my-left-4::after, .col-my-left-3::after, .col-my-left-2::after, .col-my-left-1::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-my-left-1 {
+  width: 8.3333333333%;
+}
+
+.col-my-left-2 {
+  width: 16.6666666667%;
+}
+
+.col-my-left-3 {
+  width: 25%;
+}
+
+.col-my-left-4 {
+  width: 33.3333333333%;
+}
+
+.col-my-left-5 {
+  width: 41.6666666667%;
+}
+
+.col-my-left-6 {
+  width: 50%;
+}
+
+.col-my-left-7 {
+  width: 58.3333333333%;
+}
+
+.col-my-left-8 {
+  width: 66.6666666667%;
+}
+
+.col-my-left-9 {
+  width: 75%;
+}
+
+.col-my-left-10 {
+  width: 83.3333333333%;
+}
+
+.col-my-left-11 {
+  width: 91.6666666667%;
+}
+
+.col-my-left-12 {
+  width: 100%;
+}
+
+.col-my-right-12, .col-my-right-11, .col-my-right-10, .col-my-right-9, .col-my-right-8, .col-my-right-7, .col-my-right-6, .col-my-right-5, .col-my-right-4, .col-my-right-3, .col-my-right-2, .col-my-right-1 {
+  float: right;
+  padding: 10px;
+}
+.col-my-right-12::after, .col-my-right-11::after, .col-my-right-10::after, .col-my-right-9::after, .col-my-right-8::after, .col-my-right-7::after, .col-my-right-6::after, .col-my-right-5::after, .col-my-right-4::after, .col-my-right-3::after, .col-my-right-2::after, .col-my-right-1::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.col-my-right-1 {
+  width: 8.3333333333%;
+}
+
+.col-my-right-2 {
+  width: 16.6666666667%;
+}
+
+.col-my-right-3 {
+  width: 25%;
+}
+
+.col-my-right-4 {
+  width: 33.3333333333%;
+}
+
+.col-my-right-5 {
+  width: 41.6666666667%;
+}
+
+.col-my-right-6 {
+  width: 50%;
+}
+
+.col-my-right-7 {
+  width: 58.3333333333%;
+}
+
+.col-my-right-8 {
+  width: 66.6666666667%;
+}
+
+.col-my-right-9 {
+  width: 75%;
+}
+
+.col-my-right-10 {
+  width: 83.3333333333%;
+}
+
+.col-my-right-11 {
+  width: 91.6666666667%;
+}
+
+.col-my-right-12 {
+  width: 100%;
+}
+
+.parentControls {
+  margin-bottom: 60px;
+}
+.parentControls .controls {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.parentControls .controls li {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+.parentControls .controls .btnColor {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 900;
+  font-size: 15px;
+  padding: 10px;
+  border: 2px solid #333;
+  margin-right: 0;
+  cursor: pointer;
+  border-radius: 25%;
+  -webkit-border-radius: 25%;
+  -moz-border-radius: 25%;
+  -ms-border-radius: 25%;
+  -o-border-radius: 25%;
+}
+
+.portfolio-item {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0px 10px;
+}
+.portfolio-item .single-item {
+  margin-bottom: 30px;
+  vertical-align: middle;
+  position: relative;
+  height: 100px;
+  cursor: pointer;
+}
+.portfolio-item .single-item .copyColor {
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  display: block;
+  font-weight: 900;
+  font-size: 130%;
+}
