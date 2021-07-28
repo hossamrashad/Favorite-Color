@@ -8,37 +8,98 @@ html(lang="en")
         link(rel="shortcut icon" href="images/favicon.png" type="image/x-icon")
         link(rel="stylesheet" href="css/style.css")
     body 
-        h1 Color global
+        h1(class='title') Color global
+        .popup.displayNone
+            span(class='textColor')
+
+        //- start input chose color 
+        .parentInputChooseColor 
+            input(type='color' name='inputColor' id='inputColor')
+            div(class='result' id="result")
+                textarea(class="copyColor")
+
+
         .mixitup
             .parentControls
                 ul(class="controls")
                     li(class="mixitup-control-active btnColor All" id="white" data-filter="all") 
-                    li(class=" btnColor" id="green"  data-filter=".green")
-                    li(class=" btnColor" id="blue" data-filter=".blue")
-                    li(class=" btnColor " id="red" data-filter=".red")
-                    li(class=" btnColor" id="black" data-filter=".black")
+                    li(class=" btnColor" id="#333" data-filter=".black")
+                    li(class=" btnColor" id="#001E6C" data-filter=".blue")
+                    li(class=" btnColor " id="#f42a2a" data-filter=".red")
+                    li(class=" btnColor" id="#78e08f" data-filter=".green")
+                    li(class=" btnColor" id="#576574" data-filter=".grey")
+                    li(class=" btnColor" id="#feca57" data-filter=".yellow")
+
+
+                    li(class=" btnColor" id="#5f27cd" data-filter=".Purple")
+                    li(class=" btnColor" id="#222f3e" data-filter=".Franny")
+
+
 
             .portfolio-item#MixItUpA0184F
-                div(class='single-item mix blue' data-color='#3498db')
-                    span(class="copyColor") 
+                //- 1
+
                 div(class='single-item mix black' data-color='#333')
-                    span(class="copyColor") 
-                div(class='single-item mix red' data-color='#f00')
-                    span(class="copyColor") 
-                div(class='single-item mix green' data-color='#78e08f')
-                    span(class="copyColor") 
-                div(class='single-item mix green' data-color='#83c5be')
-                    span(class="copyColor") 
-                div(class='single-item mix green' data-color='#32ff7e')
-                    span(class="copyColor")
+                    textarea(class="copyColor")
+
+                div(class='single-item mix blue' data-color='#48dbfb')
+                    textarea(class='copyColor' )
+
+                div(class='single-item mix red' data-color='#d24b4b')
+                    textarea(class="copyColor") 
+
+                div(class='single-item mix green' data-color='#1dd1a1')
+                    textarea(class="copyColor") 
+
+                //- 2
+
+                div(class='single-item mix black' data-color='#3d3d3e')
+                    textarea(class="copyColor")
+
+                div(class='single-item mix blue' data-color='#0abde3')
+                    textarea(class='copyColor' )
+
+
+                div(class='single-item mix red' data-color='#ff6b6b')
+                    textarea(class="copyColor")
+
+
                 div(class='single-item mix green' data-color='#55efc4')
-                    span(class="copyColor")
-                div(class='single-item mix green' data-color='#00b894')
-                    span(class="copyColor")
-                div(class='single-item mix green' data-color='#81b29a')
-                    span(class="copyColor")
+                    textarea(class="copyColor")
+                
+
+                //- 3
+
+                div(class='single-item mix grey' data-color='#c8d6e5')
+                    textarea(class="copyColor")
+
+                div(class='single-item mix yellow' data-color='#ff9f43')
+                    textarea(class="copyColor") 
 
 
+                div(class='single-item mix Purple' data-color='#5f27cd')
+                    textarea(class='copyColor' )
+
+
+
+                div(class='single-item mix Franny' data-color='#576574')
+                    textarea(class="copyColor")
+                
+
+                //- 4
+                div(class='single-item mix grey' data-color='#8395a7')
+                    textarea(class="copyColor")
+
+
+                div(class='single-item mix yellow' data-color='#feca57')
+                    textarea(class='copyColor' )
+
+                div(class='single-item mix Purple' data-color='#341f97')
+                    textarea(class="copyColor")
+
+
+                div(class='single-item mix Franny' data-color='#222f3e')
+                    textarea(class='copyColor' )
 
 
 

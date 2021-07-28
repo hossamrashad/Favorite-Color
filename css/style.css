@@ -1,4 +1,8 @@
 /*
+
+
+
+
 * ********** Border Radius ***********
 
 * @include borderRadius(5px);
@@ -53,9 +57,9 @@
 *
 * @include skew(0deg, 0deg);
 *
-* @include skewX(0deg, 0deg);
+* @include skewX(0deg);
 *
-* @include skewY(0deg, 0deg);
+* @include skewY(0deg);
 * 
 * *************** matrix ***********
 *
@@ -93,7 +97,8 @@
 *
 * @include lg-media{}
 * 
-* 
+* @include mq(1500px, 1900px) {}
+*
 * ************* overlay ************
 * 
 * @include overlay;
@@ -240,6 +245,162 @@
   width: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 900;
+  text-align: center;
+  width: 50%;
+  display: block;
+  padding: 40px;
+  margin: 20px auto;
+  border-width: 3px;
+  border-color: #333;
+  border-style: solid;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0, #ef3139), to(#262524));
+  background: linear-gradient(to right, #ef3139 0, #262524 100%);
+  -pie-background: linear-gradient(to right, #ef3139, #262524);
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  line-height: 1.28;
+  padding-bottom: 33px;
+}
+
+.popup {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+}
+.popup .textColor {
+  color: #fafafa;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 80px;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.displayNone {
+  display: none;
+}
+
+.parentInputChooseColor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+  padding: 50px;
+  margin: 20px auto;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.parentInputChooseColor input {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.parentInputChooseColor input::before {
+  content: "click Hear";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  color: #fafafa;
+  font-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  z-index: 1;
+}
+.parentInputChooseColor input:not([disabled]):hover::before {
+  z-index: -1;
+}
+.parentInputChooseColor .result {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #fafafa;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.parentInputChooseColor .result .copyColor {
+  width: 100%;
+  height: 100%;
+  line-height: 180px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -1;
+}
+
 .parentControls {
   margin-bottom: 60px;
 }
@@ -258,35 +419,41 @@
   margin-right: 2em;
 }
 .parentControls .controls .btnColor {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 30px;
-  line-height: 30px;
+  width: 50px;
+  height: 50px;
   font-weight: 900;
   font-size: 15px;
-  padding: 10px;
-  border: 2px solid #333;
+  border: 2px solid #ccc;
   margin-right: 0;
   cursor: pointer;
-  border-radius: 25%;
-  -webkit-border-radius: 25%;
-  -moz-border-radius: 25%;
-  -ms-border-radius: 25%;
-  -o-border-radius: 25%;
+  border-radius: 10%;
+  -webkit-border-radius: 10%;
+  -moz-border-radius: 10%;
+  -ms-border-radius: 10%;
+  -o-border-radius: 10%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+.parentControls .controls .btnColor:not([disabled]):hover {
+  transform: scaleX(1.5);
+  -webkit-transform: scaleX(1.5);
+  -moz-transform: scaleX(1.5);
+  -ms-transform: scaleX(1.5);
+  -o-transform: scaleX(1.5);
+  padding: 0 20px;
+  margin: 0 20px;
 }
 
 .portfolio-item {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 0px 10px;
+  grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
 }
 .portfolio-item .single-item {
-  margin-bottom: 30px;
-  vertical-align: middle;
-  position: relative;
-  height: 100px;
+  height: 200px;
   cursor: pointer;
 }
 .portfolio-item .single-item .copyColor {
@@ -297,4 +464,7 @@
   display: block;
   font-weight: 900;
   font-size: 130%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -1;
 }

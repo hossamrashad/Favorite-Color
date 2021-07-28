@@ -1,5 +1,125 @@
 @import "./helpers/mixin";
 // Start Page Color 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// title op page 
+.title {
+    font-family: Oswald, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    width: 50%;
+    display: block;
+    padding: 40px;
+    margin: 20px auto;
+    border-width: 3px;
+    border-color: #333;
+    border-style: solid;
+    @include borderRadius(5px);
+    // @include bordercolor(#e8ae1a #76cd9c #a60b55 #333);
+    // 
+    -webkit-text-fill-color: transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, #ef3139), to(#262524));
+    background: linear-gradient(to right, #ef3139 0, #262524 100%);
+    -pie-background: linear-gradient(to right, #ef3139, #262524);
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    line-height: 1.28;
+    padding-bottom: 33px;
+}
+
+// popup
+.popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+    .textColor {
+        color: #fafafa;
+        align-items: center;
+        font-size: 80px;
+        font-weight: 900;
+        background: hsla(0, 0%, 100%, .2);
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+        @include positionCenter;
+    }
+    // @include transitionAll(all 0.5s linear);
+}
+
+.displayNone {
+    display: none;
+}
+
+// input choose color 
+.parentInputChooseColor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 50px;
+    margin: 20px auto;
+    @include borderRadius(10px);
+    input {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        @include borderRadius(5px);
+        // z-index: -1;
+        &::before {
+            content: "click Hear";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            color: #fafafa;
+            font-size: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include borderRadius(5px);
+            z-index: 1;
+        }
+        @include hover {
+            &::before {
+                z-index: -1;
+            }
+        }
+    }
+    .result {
+        width: 200px;
+        height: 200px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid #fafafa;
+        @include borderRadius(15px);
+        .copyColor {
+            width: 100%;
+            height: 100%;
+            line-height: 180px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 40px;
+            opacity: 0;
+            cursor: pointer;
+            z-index: -1;
+        }
+    }
+}
+
 .parentControls {
     margin-bottom: 60px;
     .controls {
@@ -7,30 +127,33 @@
         @include reset-list;
         @include horizontal-list;
         .btnColor {
-            width: fit-content;
-            height: 30px;
-            line-height: 30px;
+            width: 50px;
+            height: 50px;
             font-weight: 900;
             font-size: 15px;
-            padding: 10px;
-            border: 2px solid #333;
+            border: 2px solid #ccc;
             margin-right: 0;
             cursor: pointer;
-            @include borderRadius(25%);
+            @include borderRadius(10%);
+            @include transitionAll(all, 0.3s, linear);
+            @include hover {
+                @include scaleX(1.5);
+                padding: 0 20px;
+                margin: 0 20px;
+            }
+            ;
         }
     }
 }
 
 .portfolio-item {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 0px 10px;
+    grid-template-columns: repeat(auto-fill, minmax(23%, 1fr));
+    // gap: 5px 5px;
     .single-item {
-        margin-bottom: 30px;
-        vertical-align: middle;
-        position: relative;
-        height: 100px;
+        height: 200px;
         cursor: pointer;
+        // @include borderRadius(15px);
         .copyColor {
             width: 100%;
             height: 100%;
@@ -39,7 +162,9 @@
             display: block;
             font-weight: 900;
             font-size: 130%;
-            // opacity: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: -1;
         }
     }
 }
