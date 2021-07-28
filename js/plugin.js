@@ -40,7 +40,7 @@ $(document).ready(function() {
         var audio = new Audio("../audio/1.mp3");
         audio.play();
     });
-    // input choose color 
+    // input choose color
     $("input[name='inputColor']").on("change", function() {
         // code
         console.log($(this).val());
@@ -78,8 +78,26 @@ $(document).ready(function() {
         var audio = new Audio("../audio/1.mp3");
         audio.play();
     });
-    // $("body").on("hover", ".parentInputChooseColor", function() {
-    //     // code
-    //     $("input[name='inputColor']").css("z-index", "1");
-    // });
+
+    // cursor disc what you need to do in box color
+    $(".single-item, .result").on("mousemove", function(event) {
+        // code
+        $(".parentCursor").fadeIn(1000).offset({
+            left: event.pageX - 80,
+            top: event.pageY + 70,
+        }).delay(15000).fadeOut(1000);
+    });
+
+    // cursor disc what you need to do in input
+    $("#inputColor").on("mousemove", function(event) {
+        // code
+        $(".parentCursorInput")
+            .fadeIn(1000)
+            .offset({
+                left: event.pageX - 80,
+                top: event.pageY + 30,
+            })
+            .delay(15000)
+            .fadeOut(1000);
+    });
 });
