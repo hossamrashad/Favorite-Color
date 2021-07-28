@@ -347,7 +347,7 @@
   -o-border-radius: 5px;
 }
 .parentInputChooseColor input::before {
-  content: "click here";
+  content: "click Here";
   position: absolute;
   top: 0;
   left: 0;
@@ -355,7 +355,7 @@
   height: 100%;
   background-color: #333;
   color: #fafafa;
-  font-size: 30px;
+  font-size: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,13 +365,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-transform: uppercase;
+  z-index: 1;
+  text-transform: capitalize;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  z-index: 1;
 }
 .parentInputChooseColor input:not([disabled]):hover::before {
   z-index: -1;
