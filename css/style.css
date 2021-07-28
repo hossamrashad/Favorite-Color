@@ -347,7 +347,7 @@
   -o-border-radius: 5px;
 }
 .parentInputChooseColor input::before {
-  content: "click Hear";
+  content: "click here";
   position: absolute;
   top: 0;
   left: 0;
@@ -355,7 +355,7 @@
   height: 100%;
   background-color: #333;
   color: #fafafa;
-  font-size: 40px;
+  font-size: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,6 +365,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-transform: uppercase;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
