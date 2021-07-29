@@ -37,7 +37,7 @@ $(document).ready(function() {
         $(".popup").css({ background: $(this).text() });
         $(".popup .textColor").text($(this).text());
         $(".audio").prop({ autoplay: true });
-        var audio = new Audio("../audio/1.mp3");
+        var audio = new Audio("audio/1.mp3");
         audio.play();
     });
     // input choose color
@@ -63,6 +63,8 @@ $(document).ready(function() {
                 // $(this).text(inputVal);
             }
         });
+        var audio = new Audio("audio/1.mp3");
+        audio.play();
     });
 
     // copy name of color
@@ -75,7 +77,7 @@ $(document).ready(function() {
         $(".popup").css({ background: $(this).text() });
         $(".popup .textColor").text($(this).text());
         $(".audio").prop({ autoplay: true });
-        var audio = new Audio("../audio/1.mp3");
+        var audio = new Audio("audio/1.mp3");
         audio.play();
     });
 
