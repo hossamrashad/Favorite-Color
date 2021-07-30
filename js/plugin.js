@@ -34,7 +34,7 @@ $(document).ready(function() {
         document.execCommand("copy");
         //
         $(".popup").fadeIn(500).delay(600).fadeOut(500);
-        $(".popup").css({ background: $(this).text() });
+        $(".popup").css({ background: $(this).text(), zIndex: "20" });
         $(".popup .textColor").text($(this).text());
         $(".audio").prop({ autoplay: true });
         var audio = new Audio("audio/1.mp3");
